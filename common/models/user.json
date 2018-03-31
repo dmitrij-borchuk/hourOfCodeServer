@@ -4,7 +4,22 @@
   "idInjection": true,
   "properties": {},
   "validations": [],
-  "relations": {},
+  "relations": {
+    "followers": {
+      "type": "hasMany",
+      "model": "Profil",
+      "foreignKey": "publisherId",
+      "keyThrough": "subscriberId",
+      "through": "Subscribing"
+    },
+    "subscribings": {
+      "type": "hasMany",
+      "model": "Profil",
+      "foreignKey": "subscriberId",
+      "keyThrough": "publisherId",
+      "through": "Subscribing"
+    }
+  },
   "acls": [],
   "methods": {}
 }

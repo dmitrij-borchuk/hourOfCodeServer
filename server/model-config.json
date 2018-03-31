@@ -36,14 +36,11 @@
     "dataSource": "db",
     "public": false
   },
-  "Note": {
-    "dataSource": "db"
-  },
-  "document": {
+  "user": {
     "dataSource": "db",
     "public": true
   },
-  "user": {
+  "District": {
     "dataSource": "db",
     "public": true
   },
@@ -52,6 +49,10 @@
     "public": true
   },
   "School": {
+    "dataSource": "db",
+    "public": true
+  },
+  "Subscribing": {
     "dataSource": "db",
     "public": true
   }

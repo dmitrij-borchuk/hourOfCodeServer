@@ -1,0 +1,24 @@
+{
+  "name": "Subscribing",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {},
+  "validations": [],
+  "relations": {
+    "subscriber": {
+      "type": "belongsTo",
+      "model": "user",
+      "as": "subscriber"
+    },
+    "publisher": {
+      "type": "belongsTo",
+      "model": "user",
+      "as": "publisher"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

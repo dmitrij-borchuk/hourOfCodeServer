@@ -9,7 +9,8 @@
     "document": 1,
     "user": 3,
     "School": 3,
-    "Group": 5
+    "Group": 5,
+    "District": 4
   },
   "models": {
     "User": {},
@@ -35,14 +36,19 @@
       "2": "{\"realm\":\"string\",\"username\":\"admin1\",\"password\":\"$2a$10$bQq3XZFxzruIaepJqgAL9ucSMh0wjk06uuD.Q11CrdBQsxg/R6hVi\",\"email\":\"admin1@admin.com\",\"emailVerified\":false,\"id\":2}"
     },
     "School": {
-      "1": "{\"Name\":\"N64\",\"lat\":\"11\",\"lng\":\"22\",\"id\":1}",
-      "2": "{\"Name\":\"N65\",\"lat\":\"11\",\"lng\":\"33\",\"id\":2}"
+      "1": "{\"Name\":\"N64\",\"lat\":\"11\",\"lng\":\"22\",\"id\":1,\"name\":\"N64\",\"districtId\":1}",
+      "2": "{\"Name\":null,\"lat\":\"11\",\"lng\":\"33\",\"id\":2,\"name\":\"N65\",\"districtId\":2}"
     },
     "Group": {
       "1": "{\"name\":\"A1\",\"dateStart\":\"2018-03-31T17:44:10.000Z\",\"dateEnd\":\"2018-03-31T17:44:10.000Z\",\"mentorId\":0,\"teacherId\":0,\"schoolId\":1,\"details\":\"details string\",\"id\":1}",
       "2": "{\"name\":\"Group B\",\"dateStart\":\"2018-03-31T17:59:08.482Z\",\"dateEnd\":\"2018-03-31T17:59:08.482Z\",\"mentorId\":0,\"teacherId\":0,\"schoolId\":1,\"details\":\"details string\",\"id\":2}",
       "3": "{\"name\":\"Group C\",\"dateStart\":\"2018-03-31T17:59:08.482Z\",\"dateEnd\":\"2018-03-31T17:59:08.482Z\",\"mentorId\":0,\"teacherId\":0,\"schoolId\":1,\"details\":\"details string\",\"id\":3}",
       "4": "{\"name\":\"Group D 2\",\"dateStart\":\"2018-03-31T17:59:08.482Z\",\"dateEnd\":\"2018-03-31T17:59:08.482Z\",\"mentorId\":0,\"teacherId\":0,\"schoolId\":2,\"details\":\"details string\",\"id\":4}"
+    },
+    "District": {
+      "1": "{\"name\":\"Залізничний\",\"id\":1}",
+      "2": "{\"name\":\"Шевченківський\",\"id\":2}",
+      "3": "{\"name\":\"Франківський\",\"id\":3}"
     }
   }
 }

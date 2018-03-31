@@ -19,6 +19,10 @@
     },
     "lng": {
       "type": "string"
+    },
+    "districtId": {
+      "type": "number",
+      "required": true
     }
   },
   "validations": [],
@@ -31,6 +35,12 @@
       "options": {
         "nestRemoting": true
       }
+    },
+    "disctricts": {
+      "type": "hasOne",
+      "model": "Disctrict",
+      "foreignKey": "id",
+      "primaryKey": "districtId"
     }
   },
   "acls": [],
