@@ -6,9 +6,13 @@
     "validateUpsert": true
   },
   "properties": {
-    "Name": {
+    "name": {
       "type": "string",
       "required": true
+    },
+    "address": {
+      "type": "string",
+      "required": false
     },
     "lat": {
       "type": "string"
@@ -18,7 +22,17 @@
     }
   },
   "validations": [],
-  "relations": {},
+  "relations": {
+    "groups": {
+      "type": "hasMany",
+      "model": "Group",
+      "foreignKey": "schoolId",
+      "primaryKey": "id",
+      "options": {
+        "nestRemoting": true
+      }
+    }
+  },
   "acls": [],
   "methods": {}
 }

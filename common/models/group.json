@@ -17,13 +17,13 @@
       "type": "date"
     },
     "mentorId": {
-      "type": "string"
+      "type": "number"
     },
     "teacherId": {
-      "type": "string"
+      "type": "number"
     },
     "schoolId": {
-      "type": "string",
+      "type": "number",
       "required": true
     },
     "details": {
@@ -32,7 +32,14 @@
     }
   },
   "validations": [],
-  "relations": {},
+  "relations": {
+    "schools": {
+      "type": "hasOne",
+      "model": "School",
+      "foreignKey": "id",
+      "primaryKey": "schoolId"
+    }
+  },
   "acls": [],
   "methods": {}
 }
