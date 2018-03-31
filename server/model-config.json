@@ -14,7 +14,8 @@
     ]
   },
   "User": {
-    "dataSource": "db"
+    "dataSource": "db",
+    "public": false
   },
   "AccessToken": {
     "dataSource": "db",
@@ -39,6 +40,18 @@
     "dataSource": "db"
   },
   "document": {
+    "dataSource": "db",
+    "public": true
+  },
+  "user": {
+    "dataSource": "db",
+    "public": true
+  },
+  "Group": {
+    "dataSource": "db",
+    "public": true
+  },
+  "School": {
     "dataSource": "db",
     "public": true
   }

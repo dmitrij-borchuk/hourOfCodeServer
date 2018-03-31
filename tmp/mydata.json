@@ -1,0 +1,25 @@
+{
+  "ids": {
+    "User": 1,
+    "AccessToken": 1,
+    "ACL": 1,
+    "RoleMapping": 1,
+    "Role": 1,
+    "Note": 1,
+    "document": 1,
+    "user": 3
+  },
+  "models": {
+    "User": {},
+    "AccessToken": {},
+    "ACL": {},
+    "RoleMapping": {},
+    "Role": {},
+    "Note": {},
+    "document": {},
+    "user": {
+      "1": "{\"realm\":\"string\",\"username\":\"admin\",\"password\":\"$2a$10$tFEeYlI/e338eQ0Xt4XgVuIm8jsA6a8KJ5N5kXSOLa0dTQeS5RZUO\",\"email\":\"admin@admin.com\",\"emailVerified\":false,\"id\":1}",
+      "2": "{\"realm\":\"string\",\"username\":\"admin1\",\"password\":\"$2a$10$bQq3XZFxzruIaepJqgAL9ucSMh0wjk06uuD.Q11CrdBQsxg/R6hVi\",\"email\":\"admin1@admin.com\",\"emailVerified\":false,\"id\":2}"
+    }
+  }
+}

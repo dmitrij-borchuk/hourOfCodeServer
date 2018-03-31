@@ -1,0 +1,38 @@
+{
+  "name": "Group",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "dateStart": {
+      "type": "date"
+    },
+    "dateEnd": {
+      "type": "date"
+    },
+    "mentorId": {
+      "type": "string"
+    },
+    "teacherId": {
+      "type": "string"
+    },
+    "schoolId": {
+      "type": "string",
+      "required": true
+    },
+    "details": {
+      "type": "string",
+      "required": false
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

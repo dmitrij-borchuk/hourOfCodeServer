@@ -1,0 +1,32 @@
+{
+  "ids": {
+    "User": 3,
+    "AccessToken": 4,
+    "ACL": 1,
+    "RoleMapping": 1,
+    "Role": 1,
+    "Note": 3,
+    "document": 2
+  },
+  "models": {
+    "User": {
+      "1": "{\"realm\":\"string\",\"username\":\"admin\",\"password\":\"$2a$10$xgWkYgH2cIe8ujswHX4U6uw7NgOLYvF0vIsHgXWZAc.fW5dz33FFW\",\"email\":\"admin@admin.com\",\"emailVerified\":false,\"id\":1}",
+      "2": "{\"realm\":\"string\",\"username\":\"Viktor\",\"password\":\"$2a$10$ARdRmKCrETUToOlxSOuvIuyARTJBSI/VOLh7yIGGdezTICJW776ie\",\"email\":\"rudykvictor@gmail.com\",\"emailVerified\":false,\"id\":2}"
+    },
+    "AccessToken": {
+      "vZTAdUUkXCzjB55BqYgGb6Dmn1mbrl6WzVxC9Y4unsP0S2fDMA813YLaEH7Roptg": "{\"id\":\"vZTAdUUkXCzjB55BqYgGb6Dmn1mbrl6WzVxC9Y4unsP0S2fDMA813YLaEH7Roptg\",\"ttl\":1209600,\"created\":\"2018-03-31T00:42:31.390Z\",\"userId\":1}",
+      "L9kUMfbYK6ZS9x7MXeFhgwXfcjyZ7eTsGgNTyWxmhQCNKyDggx2iFxhUELCFDw2F": "{\"id\":\"L9kUMfbYK6ZS9x7MXeFhgwXfcjyZ7eTsGgNTyWxmhQCNKyDggx2iFxhUELCFDw2F\",\"ttl\":1209600,\"created\":\"2018-03-31T13:44:50.427Z\",\"userId\":1}",
+      "RN9pYujLMKz5QDjoV37u5drN3KOqguZfDmgSf1QDZT3qNixnhchplnWBoUBZDHA3": "{\"id\":\"RN9pYujLMKz5QDjoV37u5drN3KOqguZfDmgSf1QDZT3qNixnhchplnWBoUBZDHA3\",\"ttl\":1209600,\"created\":\"2018-03-31T13:57:52.776Z\",\"userId\":1}"
+    },
+    "ACL": {},
+    "RoleMapping": {},
+    "Role": {},
+    "Note": {
+      "1": "{\"title\":\"string\",\"content\":\"string\",\"id\":1}",
+      "2": "{\"title\":\"string1\",\"content\":\"string1\",\"id\":2}"
+    },
+    "document": {
+      "1": "{\"name\":\"string\",\"date\":\"2018-03-31T00:33:30.322Z\",\"owner\":0,\"id\":1}"
+    }
+  }
+}
