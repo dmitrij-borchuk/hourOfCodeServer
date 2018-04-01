@@ -33,14 +33,12 @@ render(
     <BrowserRouter>
       {/* <LanguageProvider messages={messages}> */}
       <MuiThemeProvider theme={theme}>
-        <div>
-          <Switch>
-            <Route path="/login" component={LoginContainer} />
-            {/* <Route path="/resetPassword" component={ResetPasswordPage} />
-            <Route path="/setPassword/:token" component={SetPasswordPage} /> */}
-            <Route path="/" component={App} />
-          </Switch>
-        </div>
+        <Switch>
+          <Route path="/login" component={LoginContainer} />
+          {/* <Route path="/resetPassword" component={ResetPasswordPage} />
+          <Route path="/setPassword/:token" component={SetPasswordPage} /> */}
+          <Route path="/" component={App} />
+        </Switch>
       </MuiThemeProvider>
       {/* </LanguageProvider> */}
     </BrowserRouter>

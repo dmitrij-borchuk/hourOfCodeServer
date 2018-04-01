@@ -6,13 +6,17 @@ import {
   Redirect,
 } from 'react-router-dom';
 import { connect } from 'react-redux';
+import styled from 'styled-components';
 
-// import './App.css';
 import { getInitialData as getInitialDataAction } from './actions/loader';
 import Dashboard from './views/Dashboard';
 import Loader from './components/Loader';
 // import AppDrawer from './components/AppDrawer/container';
 // import AppHeader from './components/AppHeader/container';
+
+export const Container = styled.div`
+  height: 100%;
+`;
 
 class App extends PureComponent {
   static propTypes = {
@@ -54,7 +58,7 @@ class App extends PureComponent {
       rendering = <Redirect to="/login" />;
     } else if (!isFetching) {
       rendering = (
-        <div className="App">
+        <Container>
           {/* <AppHeader />
           <AppDrawer /> */}
 
@@ -67,7 +71,7 @@ class App extends PureComponent {
             {/* Default route */}
             <Redirect from="/" to="/dashboard" />
           </Switch>
-        </div>
+        </Container>
       );
     }
 
