@@ -2,6 +2,9 @@ import {
   AUTH_LOGIN_FETCHING,
   AUTH_LOGIN_FETCHING_FINISH,
   AUTH_LOGIN_FETCHING_ERROR,
+  AUTH_CURRENT_USER_FETCHING,
+  AUTH_CURRENT_USER_FETCHING_FINISH,
+  AUTH_CURRENT_USER_FETCHING_ERROR,
 } from '../actions/auth';
 
 const defaultState = {
@@ -47,24 +50,24 @@ export default function authReducers(state = defaultState, action) {
         error: action.payload,
       };
 
-    // // Current user
-    // case auth.AUTH_CURRENT_USER_FETCHING:
-    //   return {
-    //     ...state,
-    //     currentUserInfoFatching: true,
-    //   };
-    // case auth.AUTH_CURRENT_USER_FETCHING_FINISH:
-    //   return {
-    //     ...state,
-    //     currentUserInfoFatching: false,
-    //     currentUser: action.payload,
-    //   };
-    // case auth.AUTH_CURRENT_USER_FETCHING_ERROR:
-    //   return {
-    //     ...state,
-    //     currentUserInfoFatching: false,
-    //     currentUser: null,
-    //   };
+    // Current user
+    case AUTH_CURRENT_USER_FETCHING:
+      return {
+        ...state,
+        currentUserInfoFatching: true,
+      };
+    case AUTH_CURRENT_USER_FETCHING_FINISH:
+      return {
+        ...state,
+        currentUserInfoFatching: false,
+        currentUser: action.payload,
+      };
+    case AUTH_CURRENT_USER_FETCHING_ERROR:
+      return {
+        ...state,
+        currentUserInfoFatching: false,
+        currentUser: null,
+      };
 
     // // Login form
     // case auth.LOGIN_FORM_SET_CRENTIALS:

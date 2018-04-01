@@ -7,13 +7,13 @@ import { reduxForm, Field } from 'redux-form';
 
 import { renderTextField } from '../../utils';
 import Loader from '../Loader';
-import { LinkBtn } from '../../commonStyles';
+// import { LinkBtn } from '../../commonStyles';
 import {
   Container,
   Header,
   Content,
   ContentContainer,
-  BottomLink,
+  // BottomLink,
 } from './styles';
 
 // import messages from './messages';
@@ -67,11 +67,11 @@ function AuthForm(props) {
               >
                 Submit
               </Button>
-              <BottomLink>
+              {/* <BottomLink>
                 <LinkBtn href="/resetPassword">
                   Forgot password
                 </LinkBtn>
-              </BottomLink>
+              </BottomLink> */}
             </Content>
           </form>
 
