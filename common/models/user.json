@@ -6,6 +6,10 @@
     "telephone": {
       "type": "string",
       "required": true
+    },
+    "type": {
+      "type": "number",
+      "required": true
     }
   },
   "validations": [],

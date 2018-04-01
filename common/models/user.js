@@ -3,6 +3,8 @@
 // This file is licensed under the Artistic License 2.0.
 // License text available at https://opensource.org/licenses/Artistic-2.0
 
+
+// user types:  1: rootadmin; 2: administration; 3: teacher; 4: mentor;
 module.exports = function(User) {
     User.getName = function(userId, cb) {
         User.findById(userId, function(err, instance) {

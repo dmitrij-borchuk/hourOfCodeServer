@@ -1,7 +1,9 @@
 {
   "db": {
     "name": "db",
-    "connector": "memory"
+    "connector": "memory",
+    "file": "tmp/mydata.json"
+  },
   "EmailDS": {
     "name": "EmailDS",
     "connector": "mail",
