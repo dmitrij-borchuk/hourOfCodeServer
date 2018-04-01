@@ -1,9 +1,9 @@
 import React from 'react';
 
-import AdminView from '../AdminView';
+import TeacherView from '../TeacherView';
 
 export default function Dashboard() {
   return (
-    <AdminView />
+    <TeacherView />
   );
 }

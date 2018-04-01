@@ -15,3 +15,9 @@ export const renderTextField = ({
   );
   // return d => (console.log(d), <input />);
 };
+
+export const getTime = (date) => {
+  const str = date.toLocaleTimeString();
+
+  return str.slice(0, str.length - 3);
+};

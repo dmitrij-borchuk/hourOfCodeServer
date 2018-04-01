@@ -10,6 +10,7 @@ import styled from 'styled-components';
 
 import { getInitialData as getInitialDataAction } from './actions/loader';
 import Dashboard from './views/Dashboard';
+import GroupView from './views/GroupView';
 import Loader from './components/Loader';
 // import AppDrawer from './components/AppDrawer/container';
 // import AppHeader from './components/AppHeader/container';
@@ -65,7 +66,7 @@ class App extends PureComponent {
           {/* Routing for logged in user */}
           <Switch>
             <Route path="/dashboard" component={Dashboard} />
-            {/* <Route path="/users" component={UsersPage} /> */}
+            <Route path="/group/:id" component={GroupView} />
             {/* <Route path="/user/:id" component={UserProfilePage} /> */}
 
             {/* Default route */}
