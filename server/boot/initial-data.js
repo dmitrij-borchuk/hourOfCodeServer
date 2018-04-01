@@ -8,14 +8,14 @@ module.exports = function(app) {
 
   var usersData = [
     { username: 'admin', email: 'admin@hour-of-code.com', password: "admin" },
-    { username: 'Teacher 1', email: 'teacher1@hour-of-code.com', password: "teacher" },
-    { username: 'Teacher 2', email: 'teacher2@hour-of-code.com', password: "teacher" },
-    { username: 'Teacher 3', email: 'teacher3@hour-of-code.com', password: "teacher" },
-    { username: 'Teacher 4', email: 'teacher4@hour-of-code.com', password: "teacher" },
-    { username: 'Mentor 1', email: 'Mentor1@hour-of-code.com', password: "mentor" },
-    { username: 'Mentor 2', email: 'Mentor2@hour-of-code.com', password: "mentor" },
-    { username: 'Mentor 3', email: 'Mentor3@hour-of-code.com', password: "mentor" },
-    { username: 'Mentor 4', email: 'Mentor4@hour-of-code.com', password: "mentor" }
+    { username: 'Waylon Dalton', email: 'teacher1@hour-of-code.com', password: "teacher" },
+    { username: 'Justine Henderson', email: 'teacher2@hour-of-code.com', password: "teacher" },
+    { username: 'Abdullah Lang', email: 'teacher3@hour-of-code.com', password: "teacher" },
+    { username: 'Marcus Cruz', email: 'teacher4@hour-of-code.com', password: "teacher" },
+    { username: 'Thalia Cobb', email: 'Mentor1@hour-of-code.com', password: "mentor" },
+    { username: 'Mathias Little', email: 'Mentor2@hour-of-code.com', password: "mentor" },
+    { username: 'Eddie Randolph', email: 'Mentor3@hour-of-code.com', password: "mentor" },
+    { username: 'Angela Walker', email: 'Mentor4@hour-of-code.com', password: "mentor" }
   ];
 
   var districtData = [
@@ -25,15 +25,60 @@ module.exports = function(app) {
   ];
 
   var schoolsData = [
-    { name: 'СШ 1', lat: '49.841116', lng: "23.974943", districtId: 1 },
-    { name: 'СШ 2', lat: '49.841116', lng: "23.974943", districtId: 1 },
-    { name: 'СШ 3', lat: '49.841116', lng: "23.974943", districtId: 1 },
-    { name: 'СШ 11', lat: '49.841116', lng: "23.974943", districtId: 2 },
-    { name: 'СШ 12', lat: '49.841116', lng: "23.974943", districtId: 2 },
-    { name: 'СШ 13', lat: '49.841116', lng: "23.974943", districtId: 2 },
-    { name: 'СШ 21', lat: '49.841116', lng: "23.974943", districtId: 3 },
-    { name: 'СШ 22', lat: '49.841116', lng: "23.974943", districtId: 3 },
-    { name: 'СШ 23', lat: '49.841116', lng: "23.974943", districtId: 3 }
+    {
+      name: 'СШ 1',
+      lat: '49.892462',
+      lng: "24.15398384",
+      districtId: 1
+    },
+    {
+      name: 'СШ 2',
+      lat: '49.73391247',
+      lng: "24.09184913",
+      districtId: 1
+    },
+    {
+      name: 'СШ 3',
+      lat: '49.95107397',
+      lng: "24.19411186",
+      districtId: 1
+    },
+    {
+      name: 'СШ 11',
+      lat: '49.87345064',
+      lng: "24.13954534",
+      districtId: 2
+    },
+    {
+      name: 'СШ 12',
+      lat: '49.95632189',
+      lng: "24.1781768",
+      districtId: 2
+    },
+    {
+      name: 'СШ 13',
+      lat: '49.71768529',
+      lng: "24.01696071",
+      districtId: 2
+    },
+    {
+      name: 'СШ 21',
+      lat: '49.75717775',
+      lng: "24.18284422",
+      districtId: 3
+    },
+    {
+      name: 'СШ 22',
+      lat: '49.74150492',
+      lng: "24.03927265",
+      districtId: 3
+    },
+    {
+      name: 'СШ 23',
+      lat: '49.75043193',
+      lng: "24.10458476",
+      districtId: 3
+    },
   ];
 
   var groupsData = [
@@ -57,19 +102,19 @@ module.exports = function(app) {
   usersData.forEach(function(item) {
       user.create(item);
   });
-  
+
   districtData.forEach(function(item) {
       district.create(item);
   });
-  
+
   schoolsData.forEach(function(item) {
       school.create(item);
   });
-  
+
   groupsData.forEach(function(item) {
       group.create(item);
   });
-  
+
 
   // // Create customers and orders
   // Customer.create(customers[0], function(err, instance) {
