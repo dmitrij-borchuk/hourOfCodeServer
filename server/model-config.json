@@ -55,5 +55,12 @@
   "Subscribing": {
     "dataSource": "db",
     "public": true
+  },
+  "Email": {
+    "dataSource": "EmailDS"
+  },
+  "Test": {
+    "dataSource": "db",
+    "public": true
   }
 }
