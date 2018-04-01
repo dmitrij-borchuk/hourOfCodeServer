@@ -5,11 +5,11 @@
   "properties": {
     "telephone": {
       "type": "string",
-      "required": true
+      "required": false
     },
     "type": {
       "type": "number",
-      "required": true
+      "required": false
     }
   },
   "validations": [],

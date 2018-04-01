@@ -1,0 +1,64 @@
+{
+  "ids": {
+    "User": 1,
+    "AccessToken": 13,
+    "ACL": 1,
+    "RoleMapping": 1,
+    "Role": 1,
+    "Note": 1,
+    "document": 1,
+    "user": 12,
+    "School": 3,
+    "Group": 5,
+    "District": 4,
+    "Test": 7
+  },
+  "models": {
+    "User": {},
+    "AccessToken": {
+      "NS3vwevsVsqj3TDcDCiQue0j0bjHpSnUvRPvX82gezjN3O7ENbxSf5s557FMCxLd": "{\"id\":\"NS3vwevsVsqj3TDcDCiQue0j0bjHpSnUvRPvX82gezjN3O7ENbxSf5s557FMCxLd\",\"ttl\":1209600,\"created\":\"2018-04-01T01:38:12.376Z\",\"userId\":1}",
+      "DfaVKLIBFWBzov3uHnKvWXYQhHjLa8cb5E2MCPueACJNV6JuAUauU0BA4ncQp0YA": "{\"id\":\"DfaVKLIBFWBzov3uHnKvWXYQhHjLa8cb5E2MCPueACJNV6JuAUauU0BA4ncQp0YA\",\"ttl\":1209600,\"created\":\"2018-04-01T02:56:08.570Z\",\"userId\":1}"
+    },
+    "ACL": {},
+    "RoleMapping": {},
+    "Role": {},
+    "Note": {},
+    "document": {},
+    "user": {
+      "1": "{\"realm\":\"string\",\"username\":\"admin\",\"password\":\"$2a$10$tFEeYlI/e338eQ0Xt4XgVuIm8jsA6a8KJ5N5kXSOLa0dTQeS5RZUO\",\"email\":\"admin@admin.com\",\"emailVerified\":false,\"id\":1}",
+      "2": "{\"realm\":\"string\",\"username\":\"admin1\",\"password\":\"$2a$10$bQq3XZFxzruIaepJqgAL9ucSMh0wjk06uuD.Q11CrdBQsxg/R6hVi\",\"email\":\"admin1@admin.com\",\"emailVerified\":false,\"id\":2}",
+      "3": "{\"password\":\"$2a$10$MdJy/fwgPeqWhoSKBDJp/uaG4R0WjMcqcGPab.QnnmyEhaWStOo3W\",\"email\":\"admin5@admin.com\",\"id\":3}",
+      "4": "{\"username\":\"Teacher 1\",\"password\":\"$2a$10$uBzj/Yt0IinNwkwk/YXQHOLG8x6.UDINbZ0yuuoadrwEAWMbwNXOa\",\"email\":\"teacher1@hour-of-code.com\",\"id\":4}",
+      "5": "{\"username\":\"Teacher 2\",\"password\":\"$2a$10$r/hz.sjNAcg4nmo2fkpGaO0mCe3ZceQGIv.KWHAZmf0QmewdYmHaW\",\"email\":\"teacher2@hour-of-code.com\",\"id\":5}",
+      "6": "{\"username\":\"Teacher 3\",\"password\":\"$2a$10$bftfcYLPQI5ItstWcxwaNOJi8rE8Kp9IEIFkXglCfR/uDu57DsDDG\",\"email\":\"teacher3@hour-of-code.com\",\"id\":6}",
+      "7": "{\"username\":\"Teacher 4\",\"password\":\"$2a$10$fxLVuc2m8/RyFiYluyIdpuZcFug0qK79LvssAhqxlYu48YlJbpWEC\",\"email\":\"teacher4@hour-of-code.com\",\"id\":7}",
+      "8": "{\"username\":\"Mentor 1\",\"password\":\"$2a$10$1Yvhsxbyl8g.9ObqHUYMdeWfx2RnO5L1Yt.my5knGXF3B4epqx0.G\",\"email\":\"Mentor1@hour-of-code.com\",\"id\":8}",
+      "9": "{\"username\":\"Mentor 2\",\"password\":\"$2a$10$rK0hhqr.mx0Wb.wV.uhIQe7WppM3rXIeD6fRulv.yahla.o0ZBlO6\",\"email\":\"Mentor2@hour-of-code.com\",\"id\":9}",
+      "10": "{\"username\":\"Mentor 3\",\"password\":\"$2a$10$ldMekOLe1Rigjz5MINAbteba1d8DVlMXkZVyiRHNwX81XUCyrjyqq\",\"email\":\"Mentor3@hour-of-code.com\",\"id\":10}",
+      "11": "{\"username\":\"Mentor 4\",\"password\":\"$2a$10$tYF/lcwAwIm6nYcRSP/m2uGbK7yDVcbcMrP7YTS3TJdKzCD4AT9Gq\",\"email\":\"Mentor4@hour-of-code.com\",\"id\":11}"
+    },
+    "School": {
+      "1": "{\"Name\":\"N64\",\"lat\":\"11\",\"lng\":\"22\",\"id\":1,\"name\":\"N64\",\"districtId\":1}",
+      "2": "{\"Name\":null,\"lat\":\"11\",\"lng\":\"33\",\"id\":2,\"name\":\"N65\",\"districtId\":2}"
+    },
+    "Group": {
+      "1": "{\"name\":\"A1\",\"dateStart\":\"2018-03-31T17:44:10.000Z\",\"dateEnd\":\"2018-03-31T17:44:10.000Z\",\"mentorId\":2,\"teacherId\":1,\"schoolId\":1,\"details\":\"details string\",\"id\":1}",
+      "2": "{\"name\":\"Group B\",\"dateStart\":\"2018-03-31T17:59:08.482Z\",\"dateEnd\":\"2018-03-31T17:59:08.482Z\",\"mentorId\":1,\"teacherId\":2,\"schoolId\":1,\"details\":\"details string\",\"id\":2}",
+      "3": "{\"name\":\"Group C\",\"dateStart\":\"2018-03-31T17:59:08.482Z\",\"dateEnd\":\"2018-03-31T17:59:08.482Z\",\"mentorId\":2,\"teacherId\":1,\"schoolId\":1,\"details\":\"details string\",\"id\":3}",
+      "4": "{\"name\":\"Group D 2\",\"dateStart\":\"2018-03-31T17:59:08.482Z\",\"dateEnd\":\"2018-03-31T17:59:08.482Z\",\"mentorId\":2,\"teacherId\":1,\"schoolId\":2,\"details\":\"details string\",\"id\":4}"
+    },
+    "District": {
+      "1": "{\"name\":\"Залізничний\",\"id\":1}",
+      "2": "{\"name\":\"Шевченківський\",\"id\":2}",
+      "3": "{\"name\":\"Франківський\",\"id\":3}"
+    },
+    "Test": {
+      "1": "{\"name\":\"string\",\"date\":1522543864950,\"id\":1}",
+      "2": "{\"name\":\"string\",\"date\":1522544001190,\"id\":2}",
+      "3": "{\"name\":\"string\",\"date\":1522544331805,\"id\":3}",
+      "4": "{\"name\":\"string\",\"date\":1522544607917,\"id\":4}",
+      "5": "{\"name\":\"string\",\"date\":1522545420797,\"id\":5}",
+      "6": "{\"date\":1522545521360,\"id\":6}"
+    }
+  }
+}
