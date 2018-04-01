@@ -52,10 +52,6 @@
     "dataSource": "db",
     "public": true
   },
-  "Subscribing": {
-    "dataSource": "db",
-    "public": true
-  },
   "Email": {
     "dataSource": "EmailDS"
   },

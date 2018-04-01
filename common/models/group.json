@@ -38,6 +38,20 @@
       "model": "School",
       "foreignKey": "id",
       "primaryKey": "schoolId"
+    },
+    "teacher": {
+      "type": "hasOne",
+      "model": "user",
+      "as": "teacher", 
+      "foreignKey": "id",
+      "primaryKey": "teacherId"
+    },
+    "mentor": {
+      "type": "hasOne",
+      "model": "user",
+      "as": "mentor", 
+      "foreignKey": "id",
+      "primaryKey": "mentorId"
     }
   },
   "acls": [],

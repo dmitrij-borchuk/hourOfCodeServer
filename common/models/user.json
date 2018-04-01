@@ -2,22 +2,31 @@
   "name": "user",
   "base": "User",
   "idInjection": true,
-  "properties": {},
+  "properties": {
+    "telephone": {
+      "type": "string",
+      "required": true
+    }
+  },
   "validations": [],
   "relations": {
-    "followers": {
+    "mentoring": {
       "type": "hasMany",
-      "model": "Profil",
-      "foreignKey": "publisherId",
-      "keyThrough": "subscriberId",
-      "through": "Subscribing"
+      "model": "Group",
+      "foreignKey": "mentorId",
+      "primaryKey": "id",
+      "options": {
+        "nestRemoting": true
+      }
     },
-    "subscribings": {
+    "teaching": {
       "type": "hasMany",
-      "model": "Profil",
-      "foreignKey": "subscriberId",
-      "keyThrough": "publisherId",
-      "through": "Subscribing"
+      "model": "Group",
+      "foreignKey": "teacherId",
+      "primaryKey": "id",
+      "options": {
+        "nestRemoting": true
+      }
     }
   },
   "acls": [],
