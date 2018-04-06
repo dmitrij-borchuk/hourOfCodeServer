@@ -1,0 +1,59 @@
+{
+  "name": "Group",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "dateStart": {
+      "type": "date"
+    },
+    "dateEnd": {
+      "type": "date"
+    },
+    "mentorId": {
+      "type": "number"
+    },
+    "teacherId": {
+      "type": "number"
+    },
+    "schoolId": {
+      "type": "number",
+      "required": true
+    },
+    "details": {
+      "type": "string",
+      "required": false
+    }
+  },
+  "validations": [],
+  "relations": {
+    "schools": {
+      "type": "hasOne",
+      "model": "School",
+      "foreignKey": "id",
+      "primaryKey": "schoolId"
+    },
+    "teacher": {
+      "type": "hasOne",
+      "model": "user",
+      "as": "teacher", 
+      "foreignKey": "id",
+      "primaryKey": "teacherId"
+    },
+    "mentor": {
+      "type": "hasOne",
+      "model": "user",
+      "as": "mentor", 
+      "foreignKey": "id",
+      "primaryKey": "mentorId"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

@@ -14,7 +14,8 @@
     ]
   },
   "User": {
-    "dataSource": "db"
+    "dataSource": "db",
+    "public": false
   },
   "AccessToken": {
     "dataSource": "db",
@@ -35,10 +36,26 @@
     "dataSource": "db",
     "public": false
   },
-  "Note": {
-    "dataSource": "db"
+  "user": {
+    "dataSource": "db",
+    "public": true
   },
-  "document": {
+  "District": {
+    "dataSource": "db",
+    "public": true
+  },
+  "Group": {
+    "dataSource": "db",
+    "public": true
+  },
+  "School": {
+    "dataSource": "db",
+    "public": true
+  },
+  "Email": {
+    "dataSource": "EmailDS"
+  },
+  "Test": {
     "dataSource": "db",
     "public": true
   }

@@ -1,0 +1,67 @@
+{
+  "ids": {
+    "User": 1,
+    "AccessToken": 4,
+    "ACL": 1,
+    "RoleMapping": 1,
+    "Role": 1,
+    "user": 10,
+    "District": 4,
+    "Group": 13,
+    "School": 10,
+    "Test": 1
+  },
+  "models": {
+    "User": {},
+    "AccessToken": {
+      "hPJANRhHQQwJZNkn3kg4ED1EN5ctN0huJc5eRHE17EmLld7h7u3L1kVGUGR7sjkv": "{\"id\":\"hPJANRhHQQwJZNkn3kg4ED1EN5ctN0huJc5eRHE17EmLld7h7u3L1kVGUGR7sjkv\",\"ttl\":1209600,\"created\":\"2018-04-01T04:05:00.807Z\",\"userId\":1}",
+      "J6cYgUqqCmLbG4Y5CVUjoJWAmYvPEurdGn5uNAmN4FHHqxuI2EyPQjhcLqLEUdah": "{\"id\":\"J6cYgUqqCmLbG4Y5CVUjoJWAmYvPEurdGn5uNAmN4FHHqxuI2EyPQjhcLqLEUdah\",\"ttl\":1209600,\"created\":\"2018-04-01T04:07:11.196Z\",\"userId\":2}",
+      "hHH0wLTPgeBZEYmcoaqXFiz0EYgydQ1W5lXo0ZUKNG1m1LEgnAurEVWhwLnlWbQI": "{\"id\":\"hHH0wLTPgeBZEYmcoaqXFiz0EYgydQ1W5lXo0ZUKNG1m1LEgnAurEVWhwLnlWbQI\",\"ttl\":1209600,\"created\":\"2018-04-01T04:09:27.456Z\",\"userId\":6}"
+    },
+    "ACL": {},
+    "RoleMapping": {},
+    "Role": {},
+    "user": {
+      "1": "{\"username\":\"admin\",\"password\":\"$2a$10$URiNmoViiCBmDao.RR.sTec6IMQEcTxx5m17FYS9WawEPgI/NzGkG\",\"email\":\"admin@hour-of-code.com\",\"id\":1}",
+      "2": "{\"username\":\"Teacher 1\",\"password\":\"$2a$10$8XdDZfpod9wdZOgYlL75Lu1LcrJTXafJpPEsRnJTH6hJ8SqzlGsv6\",\"email\":\"teacher1@hour-of-code.com\",\"id\":2}",
+      "3": "{\"username\":\"Teacher 2\",\"password\":\"$2a$10$rB/ArGmQsNCIawbu2ARjFOQWx5XHlqiB3Es2rIeFcqruUJudw11Eq\",\"email\":\"teacher2@hour-of-code.com\",\"id\":3}",
+      "4": "{\"username\":\"Teacher 3\",\"password\":\"$2a$10$5eWgzRPriLij0H4qbfV2y.dgfVp1hxg2rYkhb7i1Bcsx1d2A2NlU.\",\"email\":\"teacher3@hour-of-code.com\",\"id\":4}",
+      "5": "{\"username\":\"Teacher 4\",\"password\":\"$2a$10$jHz2Vm22h9eQukSZQvXUQuVQPyxzkIYFZMbx4jSrhteqX70cWBwey\",\"email\":\"teacher4@hour-of-code.com\",\"id\":5}",
+      "6": "{\"username\":\"Mentor 1\",\"password\":\"$2a$10$yTdcgPf5ny4LxqL9xa5dn.9/o11Z4d1xQhd7s1bIh52pqqn5t2XNu\",\"email\":\"Mentor1@hour-of-code.com\",\"id\":6}",
+      "7": "{\"username\":\"Mentor 2\",\"password\":\"$2a$10$hwcBC6DQ.zB8PSWoz3y6de0ljUnsYLSMqMUVd8khHGeJ7vvmzjn76\",\"email\":\"Mentor2@hour-of-code.com\",\"id\":7}",
+      "8": "{\"username\":\"Mentor 3\",\"password\":\"$2a$10$c.kKdAVik7E5N8ZN7YbZWebRPPiwf7b3beZLLP0Bzn1M9gNvSOXcq\",\"email\":\"Mentor3@hour-of-code.com\",\"id\":8}",
+      "9": "{\"username\":\"Mentor 4\",\"password\":\"$2a$10$yr6fiYV3HqyDTufOITRT9upyeYsAdJvEdG/YYpxInOlrVgqVxwXqq\",\"email\":\"Mentor4@hour-of-code.com\",\"id\":9}"
+    },
+    "District": {
+      "1": "{\"name\":\"Залізничний\",\"id\":1}",
+      "2": "{\"name\":\"Шевченківський\",\"id\":2}",
+      "3": "{\"name\":\"Франківський\",\"id\":3}"
+    },
+    "Group": {
+      "1": "{\"name\":\"Клас 8А\",\"dateStart\":\"2018-03-31T17:59:08.482Z\",\"dateEnd\":\"2018-03-31T17:59:08.482Z\",\"mentorId\":6,\"teacherId\":2,\"schoolId\":1,\"details\":\"15 компютерів, принтер\",\"id\":1}",
+      "2": "{\"name\":\"Клас 9А\",\"dateStart\":\"2018-03-31T17:59:08.482Z\",\"dateEnd\":\"2018-03-31T17:59:08.482Z\",\"mentorId\":7,\"teacherId\":3,\"schoolId\":1,\"details\":\"5 компютерів\",\"id\":2}",
+      "3": "{\"name\":\"Клас 10А 1\",\"dateStart\":\"2018-03-31T17:59:08.482Z\",\"dateEnd\":\"2018-03-31T17:59:08.482Z\",\"mentorId\":0,\"teacherId\":4,\"schoolId\":1,\"details\":\"10 компютерів, інтернет\",\"id\":3}",
+      "4": "{\"name\":\"Клас 10А 2\",\"dateStart\":\"2018-03-31T17:59:08.482Z\",\"dateEnd\":\"2018-03-31T17:59:08.482Z\",\"mentorId\":6,\"teacherId\":3,\"schoolId\":1,\"details\":\"10 компютерів, інтернет\",\"id\":4}",
+      "5": "{\"name\":\"Клас 18А\",\"dateStart\":\"2018-03-31T17:59:08.482Z\",\"dateEnd\":\"2018-03-31T17:59:08.482Z\",\"mentorId\":6,\"teacherId\":4,\"schoolId\":2,\"details\":\"15 компютерів, принтер\",\"id\":5}",
+      "6": "{\"name\":\"Клас 19А\",\"dateStart\":\"2018-03-31T17:59:08.482Z\",\"dateEnd\":\"2018-03-31T17:59:08.482Z\",\"mentorId\":0,\"teacherId\":7,\"schoolId\":2,\"details\":\"5 компютерів\",\"id\":6}",
+      "7": "{\"name\":\"Клас 110А 1\",\"dateStart\":\"2018-03-31T17:59:08.482Z\",\"dateEnd\":\"2018-03-31T17:59:08.482Z\",\"mentorId\":8,\"teacherId\":2,\"schoolId\":2,\"details\":\"10 компютерів, інтернет\",\"id\":7}",
+      "8": "{\"name\":\"Клас 110А 2\",\"dateStart\":\"2018-03-31T17:59:08.482Z\",\"dateEnd\":\"2018-03-31T17:59:08.482Z\",\"mentorId\":9,\"teacherId\":3,\"schoolId\":2,\"details\":\"10 компютерів, інтернет\",\"id\":8}",
+      "9": "{\"name\":\"Клас 28А\",\"dateStart\":\"2018-03-31T17:59:08.482Z\",\"dateEnd\":\"2018-03-31T17:59:08.482Z\",\"mentorId\":6,\"teacherId\":5,\"schoolId\":3,\"details\":\"15 компютерів, принтер\",\"id\":9}",
+      "10": "{\"name\":\"Клас 29А\",\"dateStart\":\"2018-03-31T17:59:08.482Z\",\"dateEnd\":\"2018-03-31T17:59:08.482Z\",\"mentorId\":0,\"teacherId\":7,\"schoolId\":3,\"details\":\"5 компютерів\",\"id\":10}",
+      "11": "{\"name\":\"Клас 210А 1\",\"dateStart\":\"2018-03-31T17:59:08.482Z\",\"dateEnd\":\"2018-03-31T17:59:08.482Z\",\"mentorId\":0,\"teacherId\":5,\"schoolId\":3,\"details\":\"10 компютерів, інтернет\",\"id\":11}",
+      "12": "{\"name\":\"Клас 210А 2\",\"dateStart\":\"2018-03-31T17:59:08.482Z\",\"dateEnd\":\"2018-03-31T17:59:08.482Z\",\"mentorId\":0,\"teacherId\":4,\"schoolId\":3,\"details\":\"10 компютерів, інтернет\",\"id\":12}"
+    },
+    "School": {
+      "1": "{\"name\":\"СШ 1\",\"lat\":\"49.841116\",\"lng\":\"23.974943\",\"districtId\":0,\"id\":1}",
+      "2": "{\"name\":\"СШ 2\",\"lat\":\"49.841116\",\"lng\":\"23.974943\",\"districtId\":0,\"id\":2}",
+      "3": "{\"name\":\"СШ 3\",\"lat\":\"49.841116\",\"lng\":\"23.974943\",\"districtId\":0,\"id\":3}",
+      "4": "{\"name\":\"СШ 11\",\"lat\":\"49.841116\",\"lng\":\"23.974943\",\"districtId\":1,\"id\":4}",
+      "5": "{\"name\":\"СШ 12\",\"lat\":\"49.841116\",\"lng\":\"23.974943\",\"districtId\":1,\"id\":5}",
+      "6": "{\"name\":\"СШ 13\",\"lat\":\"49.841116\",\"lng\":\"23.974943\",\"districtId\":1,\"id\":6}",
+      "7": "{\"name\":\"СШ 21\",\"lat\":\"49.841116\",\"lng\":\"23.974943\",\"districtId\":3,\"id\":7}",
+      "8": "{\"name\":\"СШ 22\",\"lat\":\"49.841116\",\"lng\":\"23.974943\",\"districtId\":3,\"id\":8}",
+      "9": "{\"name\":\"СШ 23\",\"lat\":\"49.841116\",\"lng\":\"23.974943\",\"districtId\":3,\"id\":9}"
+    },
+    "Test": {}
+  }
+}

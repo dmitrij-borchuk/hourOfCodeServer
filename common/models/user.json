@@ -1,0 +1,45 @@
+{
+  "name": "user",
+  "base": "User",
+  "idInjection": true,
+  "properties": {
+    "telephone": {
+      "type": "string",
+      "required": false
+    },
+    "type": {
+      "type": "number",
+      "required": false
+    },
+    "adress": {
+      "type": "string",
+      "required": false
+    }
+  },
+  "validations": [],
+  "relations": {
+    "mentoring": {
+      "type": "hasMany",
+      "model": "Group",
+      "foreignKey": "mentorId",
+      "primaryKey": "id",
+      "options": {
+        "nestRemoting": true
+      }
+    },
+    "teaching": {
+      "type": "hasMany",
+      "model": "Group",
+      "foreignKey": "teacherId",
+      "primaryKey": "id",
+      "options": {
+        "nestRemoting": true
+      }
+    }
+  },
+  "acls":
+  [ 
+    { "principalType": "ROLE", "principalId": "$authenticated", "permission": "ALLOW", "property": "updateAttributes" }
+  ],
+  "methods": {}
+}

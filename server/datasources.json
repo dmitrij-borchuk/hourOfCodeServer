@@ -1,7 +1,20 @@
 {
   "db": {
     "name": "db",
-    "connector": "memory",
-    "file": "mydata.json"
+    "connector": "memory"
+  },
+  "EmailDS": {
+    "name": "EmailDS",
+    "connector": "mail",
+    "transports": [{
+      "type": "SMTP",
+      "host": "smtp.gmail.com",
+      "secure": true,
+      "port": 465,
+      "auth": {
+        "user": "ibitlab.kindhack.notifier@gmail.com",
+        "pass": "cdDHMf4d"
+      }
+    }]
   }
 }
