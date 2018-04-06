@@ -24,7 +24,7 @@ function AuthForm(props) {
   const {
     isFetching,
     handleSubmit,
-    error,
+    serverError,
   } = props;
 
   return (
@@ -41,10 +41,10 @@ function AuthForm(props) {
               <Field
                 name="email"
                 component={renderTextField}
-                error={!!error}
+                error={!!serverError}
                 label="Email"
                 fullWidth
-                helperText={error}
+                helperText={serverError}
                 disabled={isFetching}
               />
               <Field
@@ -86,12 +86,12 @@ function AuthForm(props) {
 AuthForm.propTypes = {
   handleSubmit: PropTypes.func.isRequired,
   isFetching: PropTypes.bool,
-  error: PropTypes.string,
+  serverError: PropTypes.string,
 };
 
 AuthForm.defaultProps = {
   isFetching: false,
-  error: null,
+  serverError: null,
 };
 
 export default reduxForm({

@@ -34,30 +34,28 @@ export const AUTH_LOGIN_FETCHING = 'AUTH_LOGIN_FETCHING';
 export const AUTH_LOGIN_FETCHING_FINISH = 'AUTH_LOGIN_FETCHING_FINISH';
 export const AUTH_LOGIN_FETCHING_ERROR = 'AUTH_LOGIN_FETCHING_ERROR';
 export function login(params) {
-  return (dispatch) => {
+  return async (dispatch) => {
     dispatch({
       type: AUTH_LOGIN_FETCHING,
     });
 
-    return loginRequest(params).then(
-      (res) => {
-        setItem('token', res.body.id);
-        setItem('userId', res.body.userId);
-        dispatch({
-          type: AUTH_LOGIN_FETCHING_FINISH,
-          payload: res.text,
-        });
-        return dispatch(getCurrentUser());
-      },
-    ).catch(
-      (err) => {
-        dispatch({
-          type: AUTH_LOGIN_FETCHING_ERROR,
-          payload: err.response.body,
-        });
-        return Promise.reject();
-      },
-    );
+    try {
+      const response = await loginRequest(params);
+      setItem('token', response.body.id);
+      setItem('userId', response.body.userId);
+      dispatch({
+        type: AUTH_LOGIN_FETCHING_FINISH,
+        payload: response.text,
+      });
+      return dispatch(getCurrentUser());
+    } catch (err) {
+      dispatch({
+        type: AUTH_LOGIN_FETCHING_ERROR,
+        error: true,
+        payload: err.response.body.error,
+      });
+      throw err;
+    }
   };
 }
 

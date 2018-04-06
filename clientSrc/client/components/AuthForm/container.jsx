@@ -6,11 +6,11 @@ import AuthForm from './index';
 
 function getErrorText(error) {
   const errorMessages = {
-    500: 'messages.serverError.defaultMessage',
-    400: 'messages.incorrectCredentials.defaultMessage',
+    401: 'Login failed',
   };
+  const currentError = errorMessages[error && error.statusCode];
 
-  return error ? errorMessages[error.statusCode] : '';
+  return currentError || 'Something went wrong';
 }
 
 class AuthFormContainer extends PureComponent {
@@ -23,7 +23,7 @@ class AuthFormContainer extends PureComponent {
 
     return (
       <AuthForm
-        error={getErrorText(error)}
+        serverError={getErrorText(error)}
         isFetching={isFetching}
         onSubmit={onSubmit}
       />
