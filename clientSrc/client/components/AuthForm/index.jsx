@@ -13,6 +13,7 @@ import {
   Header,
   Content,
   ContentContainer,
+  SubmitBtn,
   // BottomLink,
 } from './styles';
 
@@ -23,10 +24,6 @@ function AuthForm(props) {
   const {
     isFetching,
     handleSubmit,
-    // username,
-    // password,
-    // usernameChanged,
-    // passwordChanged,
     error,
   } = props;
 
@@ -58,15 +55,17 @@ function AuthForm(props) {
                 fullWidth
                 disabled={isFetching}
               />
-              <Button
-                variant="raised"
-                color="primary"
-                fullWidth
-                type="submit"
-                disabled={isFetching}
-              >
-                Submit
-              </Button>
+              <SubmitBtn>
+                <Button
+                  variant="raised"
+                  color="primary"
+                  fullWidth
+                  type="submit"
+                  disabled={isFetching}
+                >
+                  Submit
+                </Button>
+              </SubmitBtn>
               {/* <BottomLink>
                 <LinkBtn href="/resetPassword">
                   Forgot password
@@ -88,19 +87,11 @@ AuthForm.propTypes = {
   handleSubmit: PropTypes.func.isRequired,
   isFetching: PropTypes.bool,
   error: PropTypes.string,
-  // username: PropTypes.string,
-  // password: PropTypes.string,
-  // usernameChanged: PropTypes.func,
-  // passwordChanged: PropTypes.func,
 };
 
 AuthForm.defaultProps = {
   isFetching: false,
   error: null,
-  // username: '',
-  // password: '',
-  // usernameChanged: () => {},
-  // passwordChanged: () => {},
 };
 
 export default reduxForm({

@@ -53,30 +53,31 @@ class App extends PureComponent {
       isFetching,
       currentUser,
     } = this.props;
-    let rendering = <Loader />;
 
-    if (!isFetching && !currentUser) {
-      rendering = <Redirect to="/login" />;
-    } else if (!isFetching) {
-      rendering = (
-        <Container>
-          <AppHeader />
-          {/* <AppDrawer /> */}
-
-          {/* Routing for logged in user */}
-          <Switch>
-            <Route path="/dashboard" component={Dashboard} />
-            <Route path="/group/:id" component={GroupView} />
-            {/* <Route path="/user/:id" component={UserProfilePage} /> */}
-
-            {/* Default route */}
-            <Redirect from="/" to="/dashboard" />
-          </Switch>
-        </Container>
-      );
+    if (isFetching) {
+      return <Loader />;
     }
 
-    return rendering;
+    if (!currentUser) {
+      return <Redirect to="/login" />;
+    }
+
+    return (
+      <Container>
+        <AppHeader />
+        {/* <AppDrawer /> */}
+
+        {/* Routing for logged in user */}
+        <Switch>
+          <Route path="/dashboard" component={Dashboard} />
+          <Route path="/group/:id" component={GroupView} />
+          {/* <Route path="/user/:id" component={UserProfilePage} /> */}
+
+          {/* Default route */}
+          <Redirect from="/" to="/dashboard" />
+        </Switch>
+      </Container>
+    );
   }
 }
 

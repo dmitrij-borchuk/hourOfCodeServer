@@ -12,7 +12,6 @@ export class LoginPage extends React.PureComponent {
       onSubmit,
       history,
     } = this.props;
-    console.log(data);
 
     onSubmit(data).then(() => history.push('/'));
   }

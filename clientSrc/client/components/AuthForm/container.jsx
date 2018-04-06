@@ -19,8 +19,6 @@ class AuthFormContainer extends PureComponent {
       isFetching,
       onSubmit,
       error,
-      // username,
-      // password,
     } = this.props;
 
     return (
@@ -39,20 +37,14 @@ AuthFormContainer.propTypes = {
   error: PropTypes.shape({
     statusCode: PropTypes.number,
   }),
-  // username: PropTypes.string,
-  // password: PropTypes.string,
 };
 
 AuthFormContainer.defaultProps = {
   isFetching: false,
   error: null,
-  // username: '',
-  // password: '',
 };
 
-const mapStateToProps = ({ auth }) => ({
-  // username: auth.authForm.username,
-  // password: auth.authForm.password,
+const mapStateToProps = () => ({
 });
 
 const mapDispatchToProps = () => ({

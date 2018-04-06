@@ -6,7 +6,7 @@ import { createStore, applyMiddleware } from 'redux';
 import thunk from 'redux-thunk';
 import { composeWithDevTools } from 'redux-devtools-extension';
 import { MuiThemeProvider, createMuiTheme } from 'material-ui/styles';
-import 'normalize.css';
+import CssBaseline from 'material-ui/CssBaseline';
 import './styles.css';
 import reducers from './reducers';
 import App from './App';
@@ -33,6 +33,7 @@ render(
     <BrowserRouter>
       {/* <LanguageProvider messages={messages}> */}
       <MuiThemeProvider theme={theme}>
+        <CssBaseline />
         <Switch>
           <Route path="/login" component={LoginContainer} />
           {/* <Route path="/resetPassword" component={ResetPasswordPage} />

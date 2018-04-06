@@ -20,7 +20,11 @@ export const ContentContainer = styled.div`
   position: relative;
 `;
 
-export const BottomLink = styled.div`
-  margin-top: 10px;
-  text-align: right;
+export const SubmitBtn = styled.div`
+  margin-top: 15px;
 `;
+
+// export const BottomLink = styled.div`
+//   margin-top: 10px;
+//   text-align: right;
+// `;
