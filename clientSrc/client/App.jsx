@@ -13,7 +13,7 @@ import Dashboard from './views/Dashboard';
 import GroupView from './views/GroupView';
 import Loader from './components/Loader';
 // import AppDrawer from './components/AppDrawer/container';
-// import AppHeader from './components/AppHeader/container';
+import AppHeader from './components/AppHeader/container';
 
 export const Container = styled.div`
   height: 100%;
@@ -60,8 +60,8 @@ class App extends PureComponent {
     } else if (!isFetching) {
       rendering = (
         <Container>
-          {/* <AppHeader />
-          <AppDrawer /> */}
+          <AppHeader />
+          {/* <AppDrawer /> */}
 
           {/* Routing for logged in user */}
           <Switch>
