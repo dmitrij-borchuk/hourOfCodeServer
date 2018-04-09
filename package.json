@@ -9,7 +9,7 @@
     "lint": "eslint .",
     "start": "node .",
     "posttest": "npm run lint && nsp check",
-    "dev": "nodemon server/server.js --exec babel-node"
+    "dev": "nodemon --ignore db/ server/server.js --exec babel-node"
   },
   "dependencies": {
     "babel-cli": "^6.26.0",

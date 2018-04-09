@@ -65,5 +65,9 @@
   "Test": {
     "dataSource": "db",
     "public": true
+  },
+  "System": {
+    "dataSource": "db",
+    "public": false
   }
 }
