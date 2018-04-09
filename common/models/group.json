@@ -42,14 +42,14 @@
     "teacher": {
       "type": "hasOne",
       "model": "user",
-      "as": "teacher", 
+      "as": "teacher",
       "foreignKey": "id",
       "primaryKey": "teacherId"
     },
     "mentor": {
       "type": "hasOne",
       "model": "user",
-      "as": "mentor", 
+      "as": "mentor",
       "foreignKey": "id",
       "primaryKey": "mentorId"
     }

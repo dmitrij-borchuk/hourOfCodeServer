@@ -8,21 +8,30 @@
   "scripts": {
     "lint": "eslint .",
     "start": "node .",
-    "posttest": "npm run lint && nsp check"
+    "posttest": "npm run lint && nsp check",
+    "dev": "nodemon server/server.js --exec babel-node"
   },
   "dependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-eslint": "^8.2.2",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
     "compression": "^1.0.3",
     "cors": "^2.5.2",
+    "eslint-config-airbnb-base": "^12.1.0",
     "helmet": "^3.10.0",
+    "loopback": "^3.0.0",
     "loopback-boot": "^2.6.5",
-    "serve-favicon": "^2.0.1",
-    "strong-error-handler": "^2.0.0",
     "loopback-component-explorer": "^5.0.0",
-    "loopback": "^3.0.0"
+    "nodemon": "^1.17.3",
+    "serve-favicon": "^2.0.1",
+    "strong-error-handler": "^2.0.0"
   },
   "devDependencies": {
-    "eslint": "^3.17.1",
+    "eslint": "4.9.0",
     "eslint-config-loopback": "^8.0.0",
+    "eslint-plugin-import": "2.7.0",
     "nsp": "^2.1.0"
   },
   "repository": {

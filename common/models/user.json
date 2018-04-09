@@ -37,9 +37,24 @@
       }
     }
   },
-  "acls":
-  [ 
-    { "principalType": "ROLE", "principalId": "$authenticated", "permission": "ALLOW", "property": "updateAttributes" }
+  "acls": [
+    {
+      "principalType": "ROLE",
+      "principalId": "$authenticated",
+      "permission": "ALLOW",
+      "property": "updateAttributes"
+    },
+    {
+      "accessType": "READ",
+      "principalType": "ROLE",
+      "principalId": "$authenticated",
+      "permission": "ALLOW"
+    }
   ],
-  "methods": {}
+  "methods": {},
+  "accessType": "EXECUTE",
+  "principalType": "ROLE",
+  "principalId": "system-admin",
+  "permission": "ALLOW",
+  "property": "find"
 }

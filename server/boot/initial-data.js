@@ -1,30 +1,33 @@
-var async = require('async');
+export default async (app) => {
+  const {
+    user,
+    District,
+    School,
+    Group,
+    Role,
+    RoleMapping,
+  } = app.models;
 
-module.exports = function(app) {
-  var user = app.models.user;
-  var district = app.models.District;
-  var school = app.models.School;
-  var group = app.models.Group;
 
-  var usersData = [
-    { username: 'admin', email: 'admin@hour-of-code.com', password: "admin" },
-    { username: 'Waylon Dalton', email: 'teacher1@hour-of-code.com', password: "teacher" },
-    { username: 'Justine Henderson', email: 'teacher2@hour-of-code.com', password: "teacher" },
-    { username: 'Abdullah Lang', email: 'teacher3@hour-of-code.com', password: "teacher" },
-    { username: 'Marcus Cruz', email: 'teacher4@hour-of-code.com', password: "teacher" },
-    { username: 'Thalia Cobb', email: 'Mentor1@hour-of-code.com', password: "mentor" },
-    { username: 'Mathias Little', email: 'Mentor2@hour-of-code.com', password: "mentor" },
-    { username: 'Eddie Randolph', email: 'Mentor3@hour-of-code.com', password: "mentor" },
-    { username: 'Angela Walker', email: 'Mentor4@hour-of-code.com', password: "mentor" }
+  const usersData = [
+    { username: 'admin', email: 'admin@hour-of-code.com', password: 'admin' },
+    { username: 'Waylon Dalton', email: 'teacher1@hour-of-code.com', password: 'teacher' },
+    { username: 'Justine Henderson', email: 'teacher2@hour-of-code.com', password: 'teacher' },
+    { username: 'Abdullah Lang', email: 'teacher3@hour-of-code.com', password: 'teacher' },
+    { username: 'Marcus Cruz', email: 'teacher4@hour-of-code.com', password: 'teacher' },
+    { username: 'Thalia Cobb', email: 'Mentor1@hour-of-code.com', password: 'mentor' },
+    { username: 'Mathias Little', email: 'Mentor2@hour-of-code.com', password: 'mentor' },
+    { username: 'Eddie Randolph', email: 'Mentor3@hour-of-code.com', password: 'mentor' },
+    { username: 'Angela Walker', email: 'Mentor4@hour-of-code.com', password: 'mentor' }
   ];
 
-  var districtData = [
+  const districtData = [
     { name: 'Залізничний' },
     { name: 'Шевченківський' },
     { name: 'Франківський' }
   ];
 
-  var schoolsData = [
+  const schoolsData = [
     {
       name: 'СШ 1',
       lat: '49.892462',
@@ -81,40 +84,44 @@ module.exports = function(app) {
     },
   ];
 
-  var groupsData = [
+  const groupsData = [
     { name: 'Клас 8А', dateStart: '2018-12-03T09:00:08.482Z', dateEnd: "2018-12-03T11:00:08.482Z", details: "15 компютерів, принтер", mentorId: 6, teacherId: 2, schoolId: 1 }, //mentorId teacherId schoolId
     { name: 'Клас 9А', dateStart: '2018-12-04T13:00:08.482Z', dateEnd: "2018-12-03T14:00:08.482Z", details: "5 компютерів", mentorId: 7, teacherId: 3, schoolId: 1 },
     { name: 'Клас 10А 1', dateStart: '2018-12-05T09:00:08.482Z', dateEnd: "2018-12-03T11:00:08.482Z", details: "10 компютерів, інтернет", mentorId: 0, teacherId: 4, schoolId: 1 },
     { name: 'Клас 10А 2', dateStart: '2018-12-05T12:00:08.482Z', dateEnd: "2018-12-03T13:00:08.482Z", details: "12 компютерів, інтернет", mentorId: 6, teacherId: 3, schoolId: 1 },
     { name: 'Клас 18А', dateStart: '2018-12-03T09:00:08.482Z', dateEnd: "2018-12-03T12:00:08.482Z", details: "15 компютерів, принтер", mentorId: 6, teacherId: 4, schoolId: 2 }, //mentorId teacherId schoolId
-    { name: 'Клас 19А', dateStart: '2018-12-03T09:00:08.482Z', dateEnd: "2018-12-03T09:00:08.482Z", details: "5 компютерів", mentorId: 0, teacherId: 7, schoolId: 2 }, 
+    { name: 'Клас 19А', dateStart: '2018-12-03T09:00:08.482Z', dateEnd: "2018-12-03T09:00:08.482Z", details: "5 компютерів", mentorId: 0, teacherId: 7, schoolId: 2 },
     { name: 'Клас 110А 1', dateStart: '2018-12-03T09:00:08.482Z', dateEnd: "2018-12-03T09:00:08.482Z", details: "10 компютерів, інтернет", mentorId: 8, teacherId: 2, schoolId: 2 },
     { name: 'Клас 110А 2', dateStart: '2018-12-03T09:00:08.482Z', dateEnd: "2018-12-03T09:00:08.482Z", details: "10 компютерів, інтернет", mentorId: 9, teacherId: 3, schoolId: 2 },
     { name: 'Клас 28А', dateStart: '2018-12-03T09:00:08.482Z', dateEnd: "2018-12-03T09:00:08.482Z", details: "15 компютерів, принтер", mentorId: 6, teacherId: 5, schoolId: 3}, //mentorId teacherId schoolId
-    { name: 'Клас 29А', dateStart: '2018-12-03T09:00:08.482Z', dateEnd: "2018-12-03T09:00:08.482Z", details: "5 компютерів", mentorId: 0, teacherId: 7, schoolId: 3 }, 
+    { name: 'Клас 29А', dateStart: '2018-12-03T09:00:08.482Z', dateEnd: "2018-12-03T09:00:08.482Z", details: "5 компютерів", mentorId: 0, teacherId: 7, schoolId: 3 },
     { name: 'Клас 210А 1', dateStart: '2018-12-03T09:00:08.482Z', dateEnd: "2018-12-03T09:00:08.482Z", details: "10 компютерів, інтернет", mentorId: 0, teacherId: 5, schoolId: 3 },
     { name: 'Клас 210А 2', dateStart: '2018-12-03T09:00:08.482Z', dateEnd: "2018-12-03T09:00:08.482Z", details: "10 компютерів, інтернет", mentorId: 0, teacherId: 4, schoolId: 3 },
-    { name: 'Клас 29А', dateStart: '2018-12-03T09:00:08.482Z', dateEnd: "2018-12-03T09:00:08.482Z", details: "5 компютерів", mentorId: 0, teacherId: 7, schoolId: 4 }, 
+    { name: 'Клас 29А', dateStart: '2018-12-03T09:00:08.482Z', dateEnd: "2018-12-03T09:00:08.482Z", details: "5 компютерів", mentorId: 0, teacherId: 7, schoolId: 4 },
     { name: 'Клас 210А 1', dateStart: '2018-12-03T09:00:08.482Z', dateEnd: "2018-12-03T09:00:08.482Z", details: "10 компютерів, інтернет", mentorId: 0, teacherId: 5, schoolId: 4 },
     { name: 'Клас 210А 2', dateStart: '2018-12-03T09:00:08.482Z', dateEnd: "2018-12-03T09:00:08.482Z", details: "10 компютерів, інтернет", mentorId: 0, teacherId: 4, schoolId: 4 }
   ];
 
-  usersData.forEach(function(item) {
-      user.create(item);
+  const users = await user.create(usersData);
+  const systemAdminRole = await Role.create({
+    name: 'system-admin',
+  });
+  systemAdminRole.principals.create({
+    principalType: RoleMapping.USER,
+    principalId: users[0].id,
   });
 
-  districtData.forEach(function(item) {
-      district.create(item);
+  districtData.forEach((item) => {
+    District.create(item);
   });
 
-  schoolsData.forEach(function(item) {
-      school.create(item);
+  schoolsData.forEach((item) => {
+    School.create(item);
   });
 
-  groupsData.forEach(function(item) {
-      group.create(item);
+  groupsData.forEach((item) => {
+    Group.create(item);
   });
-
 
   // // Create customers and orders
   // Customer.create(customers[0], function(err, instance) {
