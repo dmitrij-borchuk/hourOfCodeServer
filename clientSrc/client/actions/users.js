@@ -1,6 +1,7 @@
 import {
   getWithTeaching,
   getById,
+  getAll,
 } from '../api/users';
 
 export const GET_USER_WITH_TEACHING_FETCHING = 'GET_USER_WITH_TEACHING_FETCHING';
@@ -54,5 +55,31 @@ export function getUsersById() {
         return Promise.reject(err);
       }
     });
+  };
+}
+
+export const GET_USERS_FETCHING = 'GET_USERS_FETCHING';
+export const GET_USERS_FETCHING_FINISH = 'GET_USERS_FETCHING_FINISH';
+export const GET_USERS_FETCHING_ERROR = 'GET_USERS_FETCHING_ERROR';
+export function getUsers() {
+  return async (dispatch) => {
+    dispatch({
+      type: GET_USERS_FETCHING,
+    });
+
+    try {
+      const responce = await getAll();
+      dispatch({
+        type: GET_USERS_FETCHING_FINISH,
+        payload: responce.body,
+      });
+    } catch (error) {
+      dispatch({
+        type: GET_USERS_FETCHING_ERROR,
+        error: true,
+        payload: error,
+      });
+      throw error;
+    }
   };
 }

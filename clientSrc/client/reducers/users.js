@@ -1,4 +1,7 @@
-import { GET_USER_WITH_TEACHING_FETCHING_FINISH } from '../actions/users';
+import {
+  GET_USER_WITH_TEACHING_FETCHING_FINISH,
+  GET_USERS_FETCHING_FINISH,
+} from '../actions/users';
 
 const defaultState = {
   list: [],
@@ -11,6 +14,11 @@ export default function authReducers(state = defaultState, action) {
       return {
         ...state,
         userWithTeaching: action.payload,
+      };
+    case GET_USERS_FETCHING_FINISH:
+      return {
+        ...state,
+        list: action.payload,
       };
 
     default:
