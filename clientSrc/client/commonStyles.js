@@ -7,3 +7,9 @@ import styled from 'styled-components';
 export const Page = styled.div`
   padding: 1rem;
 `;
+
+export const Fab = styled.div`
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+`;
