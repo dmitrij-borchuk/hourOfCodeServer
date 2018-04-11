@@ -23,7 +23,7 @@ class UsersPage extends PureComponent {
   }
 
   state = {
-    dialogOpened: true,
+    dialogOpened: false,
   };
 
   componentDidMount() {

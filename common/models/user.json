@@ -45,16 +45,12 @@
       "property": "updateAttributes"
     },
     {
-      "accessType": "READ",
+      "accessType": "EXECUTE",
       "principalType": "ROLE",
-      "principalId": "$authenticated",
-      "permission": "ALLOW"
+      "principalId": "system-admin",
+      "permission": "ALLOW",
+      "property": "find"
     }
   ],
-  "methods": {},
-  "accessType": "EXECUTE",
-  "principalType": "ROLE",
-  "principalId": "system-admin",
-  "permission": "ALLOW",
-  "property": "find"
+  "methods": {}
 }
