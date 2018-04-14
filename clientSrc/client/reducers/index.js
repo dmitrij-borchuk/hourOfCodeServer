@@ -6,6 +6,7 @@ import loader from './loader';
 import schools from './schools';
 import users from './users';
 import groups from './groups';
+import pages from './pages';
 
 export default combineReducers({
   app,
@@ -14,6 +15,7 @@ export default combineReducers({
   schools,
   users,
   groups,
+  pages,
 
   form: formReducer,
 });

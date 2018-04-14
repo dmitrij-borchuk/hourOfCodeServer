@@ -25,6 +25,7 @@
     "loopback-boot": "^2.6.5",
     "loopback-component-explorer": "^5.0.0",
     "nodemon": "^1.17.3",
+    "ramda": "^0.25.0",
     "serve-favicon": "^2.0.1",
     "strong-error-handler": "^2.0.0"
   },

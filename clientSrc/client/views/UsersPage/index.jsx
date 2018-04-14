@@ -4,12 +4,14 @@ import PropTypes from 'prop-types';
 import Button from 'material-ui/Button';
 import AddIcon from 'material-ui-icons/Add';
 import { reduxForm, Field, submit } from 'redux-form';
-import { getUsers, createUser } from '../../actions/users';
+import { createUser } from '../../actions/users';
+import { usersPageGetData } from '../../actions/pages';
 import List from '../../components/List';
 import Dialog from '../../components/DialogForm';
 import { Fab } from '../../commonStyles';
 import { renderTextField } from '../../utils';
 import { DialogFormBody } from '../../components/DialogForm/styles';
+import Loader from '../../components/Loader';
 
 const FORM_NAME = 'usersPage';
 
@@ -17,6 +19,7 @@ class UsersPage extends PureComponent {
   static propTypes = {
     getData: PropTypes.func.isRequired,
     users: PropTypes.arrayOf(PropTypes.shape({})),
+    listFetching: PropTypes.bool.isRequired,
   }
   static defaultProps = {
     users: [],
@@ -53,6 +56,7 @@ class UsersPage extends PureComponent {
   render() {
     const {
       users,
+      listFetching,
     } = this.props;
     const {
       dialogOpened,
@@ -62,6 +66,10 @@ class UsersPage extends PureComponent {
     // TODO
     const serverError = '';
     const isFetching = false;
+
+    if (listFetching) {
+      return <Loader />;
+    }
 
     return (
       <Fragment>
@@ -99,12 +107,13 @@ class UsersPage extends PureComponent {
   }
 }
 
-const mapStateToProps = ({ users }) => ({
+const mapStateToProps = ({ users, pages }) => ({
   users: users.list,
+  listFetching: pages.usersPage.fetching,
 });
 
 const mapDispatchToProps = dispatch => ({
-  getData: () => dispatch(getUsers()),
+  getData: () => dispatch(usersPageGetData()),
   onSaveClick: () => dispatch(submit(FORM_NAME)),
   onSubmit: data => dispatch(createUser(data)),
 });
